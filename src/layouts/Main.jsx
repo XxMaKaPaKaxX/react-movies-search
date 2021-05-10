@@ -1,35 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import MoviesList from '../components/MoviesList';
 import Preloader from '../components/Preloader';
 import Search from '../components/Search';
+import { StoreContext } from '../store/StoreProvider';
+
 
 const Main = () => {
-    const url = `http://www.omdbapi.com/?apikey=76cc608b&s=matrix`;
 
-    const [searchingResult, setSearchingResult] = useState([]);
-    const [totalResults, setTotalResults] = useState();
-
-    const fetchData = async () => {
-        const response = await fetch(url);
-        const { Search, totalResults } = await response.json();
-        setSearchingResult(Search);
-        setTotalResults(totalResults);
-    }
-
-    useEffect(() => {
-        fetchData();
-    }, [])
-
+    const { searchingResult } = useContext(StoreContext)
     console.log(searchingResult)
-
     return (
         <main className="container content">
             <Search />
-            { searchingResult.length === 0
-                ? <Preloader />
-                : <MoviesList movies={searchingResult} />
+            {searchingResult.length !== 0
+                ? <MoviesList />
+                : <Preloader />
             }
-
         </main>
     );
 }
