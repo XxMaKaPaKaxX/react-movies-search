@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../store/StoreProvider';
 import Card from './Card';
 
-
 const MoviesList = () => {
 
     const { searchingResult = [] } = useContext(StoreContext)

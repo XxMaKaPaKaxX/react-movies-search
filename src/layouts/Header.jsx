@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
             <div className="container-fluid">
-                <a className="navbar-brand" href="!#">Navbar</a>
+                <a className="navbar-brand" href="!#">React movies search</a>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -16,15 +16,14 @@ const Header = () => {
                 >
                     <i className="fas fa-bars"></i>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="!#">Home</a>
+                            <a className="nav-link active" aria-current="page" href="https://github.com/XxMaKaPaKaxX?tab=repositories">
+                                See another my projects
+                                <i className="fab fa-github mx-2"></i>
+                            </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="!#">Features</a>
-                        </li>
-
                     </ul>
                 </div>
             </div>

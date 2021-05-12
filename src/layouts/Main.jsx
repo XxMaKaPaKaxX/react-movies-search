@@ -8,10 +8,7 @@ import Preloader from '../components/Preloader';
 
 const Main = () => {
 
-
     const { searchingResult, loading } = useContext(StoreContext);
-    console.log(loading)
-    console.log(searchingResult)
     return (
         <main className="container content">
             <Search />
