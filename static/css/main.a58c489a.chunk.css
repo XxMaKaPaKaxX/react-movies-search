@@ -1,0 +1,2 @@
+main{min-height:calc(100vh - 115px)}body{position:relative}.modal-info{position:fixed;top:50%;left:50%;padding:15px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:100}.modal-info::-webkit-backdrop{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}.modal-info::backdrop{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+/*# sourceMappingURL=main.a58c489a.chunk.css.map */
