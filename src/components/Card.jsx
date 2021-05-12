@@ -1,7 +1,15 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { StoreContext } from '../store/StoreProvider';
 
 const Card = ({ imdbID, Poster, Title, Type, Year }) => {
+
+    const { setIsModalOpen, setSelectedItemId } = useContext(StoreContext);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+        setSelectedItemId(imdbID);
+    }
+
 
     return (
         <div className="col">
@@ -25,6 +33,11 @@ const Card = ({ imdbID, Poster, Title, Type, Year }) => {
                             {Year}
                         </p>
                     </div>
+                </div>
+                <div className="card-footer text-muted d-flex justify-content-center">
+                    <button type="button" className="btn btn-outline-success" data-mdb-ripple-color="dark" onClick={showModal}>
+                        see details
+                    </button>
                 </div>
             </div>
         </div>

@@ -11,6 +11,8 @@ const StoreProvider = ({ children }) => {
     const [searchingResult, setSearchingResult] = useState([]);
     const [totalResults, setTotalResults] = useState();
     const [loading, setLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedItemId, setSelectedItemId] = useState()
 
     useEffect(() => {
         setSearchingUrl(`https://www.omdbapi.com/?apikey=${API_KEY}&type=${typeContent}&page=${currentPage}&s=`)
@@ -44,7 +46,11 @@ const StoreProvider = ({ children }) => {
             fetchData,
             typeContent,
             setTypeContent,
-            loading
+            loading,
+            isModalOpen,
+            setIsModalOpen,
+            selectedItemId,
+            setSelectedItemId
 
         }}>
             {children}

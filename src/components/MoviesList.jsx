@@ -6,7 +6,7 @@ const MoviesList = () => {
 
     const { searchingResult = [] } = useContext(StoreContext)
 
-    const moviesElements = searchingResult.map(item => <Card key={item.imdbID} {...item} />)
+    const moviesElements = searchingResult.map((item, index) => <Card key={`${item.imdbID}${index}}`} {...item} />)
     return (
         <section className="row row-cols-2 row-cols-md-4 g-4 my-2">
             {searchingResult.length !== 0
@@ -14,7 +14,6 @@ const MoviesList = () => {
                 : <h4>Nothing found</h4>
             }
         </section>
-
     );
 }
 

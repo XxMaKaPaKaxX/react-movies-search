@@ -4,6 +4,7 @@ import MoviesList from '../components/MoviesList';
 import Search from '../components/Search';
 import ContentTypeSelector from '../components/ContentTypeSelector';
 import Preloader from '../components/Preloader';
+import Modal from '../components/Modal/Modal';
 
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
                 ? <Preloader />
                 : <MoviesList />
             }
+            <Modal />
 
         </main>
     );
