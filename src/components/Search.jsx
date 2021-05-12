@@ -4,7 +4,7 @@ import { StoreContext } from '../store/StoreProvider';
 const Search = () => {
 
     const [searchingTitle, setSearchingTitle] = useState('');
-    const { fetchData, searchingUrl } = useContext(StoreContext);
+    const { setTitle, setCurrentPage } = useContext(StoreContext);
 
     const handleOnChangeTitle = (e) => {
         setSearchingTitle(e.target.value);
@@ -12,9 +12,14 @@ const Search = () => {
 
     const handleSearchbyEnter = (e) => {
         if (e.key === 'Enter') {
-            fetchData(`${searchingUrl}${searchingTitle}`);
+            setTitle(searchingTitle);
+            setCurrentPage(1);
         }
     };
+    const handleOnSearchClick = () => {
+        setTitle(searchingTitle);
+        setCurrentPage(1);
+    }
 
     return (
         <div className="input-group my-3">
@@ -32,7 +37,7 @@ const Search = () => {
             <button
                 className="btn btn-outline-success"
                 type="button"
-                onClick={() => fetchData(`${searchingUrl}${searchingTitle}`)}
+                onClick={handleOnSearchClick}
             >
                 Search
             </button>

@@ -10,7 +10,6 @@ const Card = ({ imdbID, Poster, Title, Type, Year }) => {
         setSelectedItemId(imdbID);
     }
 
-
     return (
         <div className="col">
             <div className="card h-100">

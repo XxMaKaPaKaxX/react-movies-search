@@ -29,9 +29,8 @@ const ItemInfo = ({ handleOnClose }) => {
             <button
                 className="btn btn-danger btn-rounded align-self-end"
                 onClick={handleOnClose}
-            >
-                close
-                </button>
+            >close</button>
+
             {
                 isLoading
                     ? <Preloader />
