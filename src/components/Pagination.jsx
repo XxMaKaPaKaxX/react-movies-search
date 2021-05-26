@@ -7,7 +7,10 @@ const Pagination = () => {
     const { currentPage, setCurrentPage, totalResults } = useContext(StoreContext);
 
     const topScroll = () => {
-        window.scrollTo(0, 0)
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     }
 
     const handlePrevPage = () => {

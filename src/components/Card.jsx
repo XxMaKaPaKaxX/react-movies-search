@@ -11,7 +11,7 @@ const Card = ({ imdbID, Poster, Title, Type, Year }) => {
     }
 
     return (
-        <div className="col">
+        <article className="col hover-shadow">
             <div className="card h-100">
                 <img
                     src={
@@ -34,12 +34,12 @@ const Card = ({ imdbID, Poster, Title, Type, Year }) => {
                     </div>
                 </div>
                 <div className="card-footer text-muted d-flex justify-content-center">
-                    <button type="button" className="btn btn-outline-success" data-mdb-ripple-color="dark" onClick={showModal}>
+                    <button type="button" className="btn btn-outline-primary flex-grow-1" data-mdb-ripple-color="dark" onClick={showModal}>
                         see details
                     </button>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

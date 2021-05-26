@@ -35,7 +35,7 @@ const Search = () => {
                 onKeyDown={handleSearchbyEnter}
             />
             <button
-                className="btn btn-outline-success"
+                className="btn btn-outline-primary"
                 type="button"
                 onClick={handleOnSearchClick}
             >
